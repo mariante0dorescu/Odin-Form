@@ -79,7 +79,7 @@ main{
 
 .image{
   width: 100%;
-  min-height: 30vh;
+  min-height: 50vh;
   background-image: url(./background.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -89,7 +89,7 @@ main{
 
 .form-container__text {
   padding: var(--pading-large);
-  height: 20vh;
+  min-height: 20vh;
 }
 
 .form-container__inputs,
@@ -128,7 +128,7 @@ a {
 .form-container__input > label{
   margin-bottom: 1rem;
   font-family: inherit;
-  font-size: var(--medium-font-size)
+  font-size: var(--small-font-size)
 }
 
 .form-container__input > input{
@@ -136,6 +136,16 @@ a {
   padding: 1rem;
   border-radius: 10px;
   font-size: 1.6rem;
+}
+
+.submit-button{
+  background: var(--color-btn-bg);
+  color: var(--color-base-txt);
+  padding: 1rem 2rem;
+  font-size: var(--medium-font-size);
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 
