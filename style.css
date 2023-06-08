@@ -4,13 +4,16 @@
   --color-base-small-opacity: rgba(0,0,0,0.2);
   --color-base-txt: white;
   --color-btn-bg: orange;
-  --pading-top-bottom: 7vh;
-  --pading-large: 5vh 5vh 0 5vh;
+  --pading-top-bottom: 3vh;
+  --pading-large: 3vh 10vh 0vh 0vh;
   --pading-small: 0 5vh;
   --color-gray-dark: rgb(51, 51, 51);
-  --small-font-size: clamp(1.6rem, calc(1.1rem + 3vw), 2rem);
-  --large-font-size: clamp(3rem, calc(1.6rem + 0.97vw), 4rem);
-  --medium-font-size: clamp(2rem, calc(2.4rem + 2vw), 3rem);
+  /* --small-font-size: clamp(0.6rem, calc(0.8rem + 1vw), 1.8rem);
+  --medium-font-size: clamp(0.8rem, calc(1.2rem + 1vw), 2.4rem);
+  --large-font-size: clamp(1rem, calc(1rem + 1vw), 2.2rem); */
+  --small-font-size: 1rem;
+  --medium-font-size: 1.4rem;
+  --large-font-size: 2rem;
 }
 
 :root.dark{
@@ -128,14 +131,24 @@ a {
 .form-container__input > label{
   margin-bottom: 1rem;
   font-family: inherit;
-  font-size: var(--small-font-size)
+  font-size: var(--medium-font-size);
 }
 
-.form-container__input > input{
+form input{
   font-family: inherit;
   padding: 1rem;
   border-radius: 10px;
-  font-size: 1.6rem;
+  font-size: var(--medium-font-size);
+  border: none;
+  outline: none;
+}
+
+form input:valid{
+  border: 2px solid greenyellow;
+}
+
+form input:invalid{
+  border: 2px solid var(--color-btn-bg);
 }
 
 .submit-button{
@@ -146,6 +159,7 @@ a {
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 
@@ -160,7 +174,12 @@ a {
     max-width: 40vw;
     min-height: 100vh;
     background-position: left;
-    background-image: linear-gradient(to left, var(--color-base-large-opacity) 0%,var(--color-base-small-opacity) 20%), url(./background.jpg);
+    background-image: linear-gradient(
+      to left, 
+      var(--color-base-bg) 1%,
+      var(--color-base-large-opacity) 2%,
+      var(--color-base-small-opacity) 20%), 
+      url(./background.jpg);
     z-index: 0;
   }
 
