@@ -7,3 +7,9 @@ input.addEventListener("change", (e) => {
         document.body.setAttribute("data-theme", "light");
     }
 });
+
+// logo background height adjusment based on the form height
+// function adjustHeight() {
+//   document.querySelector(".form-container__inputs").style.height = document.defaultView.getComputedStyle(document.querySelector(".image-logo")).getPropertyValue("height")
+// }
+// adjustHeight()
